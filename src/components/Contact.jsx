@@ -62,26 +62,35 @@ const Contact = () => {
           <p className='text-gray-300 py-4'>Fill The Form To Contact Me!</p>
         </div>
         <input
-          className='bg-[#ccd6f6] p-2'
+          className='bg-[#ccd6f6] p-2 rounded-md'
           type='text'
-          placeholder='Name'
+          placeholder='Full Name...'
           name='name'
-          rounded-sm
+          {...register('name')}
         />
+        {errors.name && (
+          <span className='text-red-600'>{errors.name.message}</span>
+        )}
         <input
-          className='my-4 p-2 bg-[#ccd6f6]'
+          className='my-4 p-2 bg-[#ccd6f6] rounded-md'
           type='email'
-          placeholder='Email'
+          placeholder='Email...'
           name='email'
-          rounded-sm
+          {...register('email')}
         />
+        {errors.email && (
+          <span className='text-red-600'>{errors.email.message}</span>
+        )}
         <textarea
-          rounded-sm
-          className='bg-[#ccd6f6] p-2'
+          className='bg-[#ccd6f6] p-2 rounded-md'
           name='message'
           rows='10'
-          placeholder='Message'
+          placeholder='Message...'
+          {...register('message')}
         ></textarea>
+        {errors.message && (
+          <span className='text-red-600'>{errors.message.message}</span>
+        )}
         <button className='text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center'>
           Let's Collaborate
         </button>
