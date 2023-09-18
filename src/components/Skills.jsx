@@ -8,7 +8,7 @@ import Node from '../assets/node.png';
 import FireBase from '../assets/firebase.png';
 import Git from '../assets/git.png';
 import Tailwind from '../assets/tailwind.png';
-import Mongo from '../assets/mongo.png';
+import ChakraUI from '../assets/chakraui.png';
 
 const Skills = () => {
   return (
@@ -19,7 +19,7 @@ const Skills = () => {
           <p className='text-4xl font-bold inline border-b-4 border-pink-600 '>
             Skills
           </p>
-          <p className='py-4'>My Current Stack: </p>
+          <p className='py-4 text-xl'>My Current Stack: </p>
         </div>
 
         <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
@@ -34,6 +34,10 @@ const Skills = () => {
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img className='w-20 mx-auto' src={Tailwind} alt='HTML icon' />
             <p className='my-4'>Tailwind CSS</p>
+          </div>
+          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+            <img className='w-20 mx-auto' src={ChakraUI} alt='HTML icon' />
+            <p className='my-4'>Chakra UI</p>
           </div>
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img className='w-20 mx-auto' src={JavaScript} alt='HTML icon' />
@@ -52,11 +56,6 @@ const Skills = () => {
             <img className='w-20 mx-auto' src={Git} alt='HTML icon' />
             <p className='my-4'>Git</p>
           </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={Mongo} alt='HTML icon' />
-            <p className='my-4'>MongoDB</p>
-          </div>
-
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img className='w-20 mx-auto' src={FireBase} alt='HTML icon' />
             <p className='my-4'>FireBase</p>
