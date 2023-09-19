@@ -86,7 +86,7 @@ const Contact = () => {
         )}
         <textarea
           {...register('message')}
-          className='bg-[#ccd6f6] p-2 rounded-md'
+          className='bg-[#ccd6f6] p-2 rounded-md resize-none	'
           name='message'
           rows='10'
           placeholder='Message...'
