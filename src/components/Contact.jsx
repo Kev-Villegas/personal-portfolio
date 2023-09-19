@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 
 const Contact = () => {
   const schema = z.object({
-    fullName: z
+    name: z
       .string()
       .min(4, { message: 'Name must be at least 4 characters!' })
       .max(30),
@@ -28,7 +28,7 @@ const Contact = () => {
 
   const submitData = (data) => {
     console.log('It Worked', data);
-    fetch('https://getform.io/f/3055c8c3-8dac-4326-8bc5-1232396d5bf5', {
+    fetch('https://getform.io/f/7673bb37-857a-443a-aaa3-92cde345d545', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -52,8 +52,6 @@ const Contact = () => {
     >
       <form
         onSubmit={handleSubmit(submitData)}
-        method='POST'
-        action='https://getform.io/f/7673bb37-857a-443a-aaa3-92cde345d545'
         className='flex flex-col max-w-[600px] w-full'
       >
         <div className='pb-2'>
@@ -65,14 +63,14 @@ const Contact = () => {
           </p>
         </div>
         <input
-          {...register('fullName')}
+          {...register('name')}
           className='bg-[#ccd6f6] p-2 rounded-md'
           type='text'
-          placeholder='Full Name...'
-          name='fullName'
+          placeholder='Name...'
+          name='name'
         />
-        {errors.fullName && (
-          <span className='text-red-600'>{errors.fullName.message}</span>
+        {errors.name && (
+          <span className='text-red-600'>{errors.name.message}</span>
         )}
         <input
           {...register('email')}
