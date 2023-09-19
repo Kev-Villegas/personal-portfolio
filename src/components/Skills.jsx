@@ -9,6 +9,7 @@ import FireBase from '../assets/firebase.png';
 import Git from '../assets/git.png';
 import Tailwind from '../assets/tailwind.png';
 import ChakraUI from '../assets/chakraui.png';
+import TypeScript from '../assets/typescript.png';
 
 const Skills = () => {
   return (
@@ -40,12 +41,16 @@ const Skills = () => {
             <p className='my-4'>Chakra UI</p>
           </div>
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={JavaScript} alt='HTML icon' />
+            <img className='w-20 mx-auto rounded-sm' src={JavaScript} alt='HTML icon' />
             <p className='my-4'>JavaScript</p>
           </div>
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img className='w-20 mx-auto' src={ReactImg} alt='HTML icon' />
             <p className='my-4'>React.js</p>
+          </div>
+          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+            <img className='w-20 mx-auto rounded-sm' src={TypeScript} alt='HTML icon' />
+            <p className='my-4'>TypeScript</p>
           </div>
 
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
@@ -56,10 +61,7 @@ const Skills = () => {
             <img className='w-20 mx-auto' src={Git} alt='HTML icon' />
             <p className='my-4'>Git</p>
           </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={FireBase} alt='HTML icon' />
-            <p className='my-4'>FireBase</p>
-          </div>
+          
         </div>
       </div>
     </div>

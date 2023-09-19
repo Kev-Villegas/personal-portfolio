@@ -9,35 +9,90 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
+    <div className='pl-10 fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
       <div>
-        <h3>KV</h3>
+        <Link
+          to='home'
+          activeStyle={{
+            fontWeight: 'bold',
+          }}
+          spy={true}
+          smooth={true}
+          duration={500}
+        >
+          <h3 className='cursor-pointer'>KV</h3>
+        </Link>
       </div>
 
       {/* menu */}
       <ul className='hidden md:flex'>
         <li>
-          <Link to='home' smooth={true} duration={500}>
+          <Link
+            to='home'
+            activeStyle={{
+              fontWeight: 'bold',
+              borderBottom: '2px solid #b3317d',
+            }}
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link to='about' smooth={true} duration={500}>
+          <Link
+            to='about'
+            activeStyle={{
+              fontWeight: 'bold',
+              borderBottom: '2px solid #b3317d',
+            }}
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             About
           </Link>
         </li>
         <li>
-          <Link to='skills' smooth={true} duration={500}>
+          <Link
+            to='skills'
+            activeStyle={{
+              fontWeight: 'bold',
+              borderBottom: '2px solid #b3317d',
+            }}
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             Skills
           </Link>
         </li>
         <li>
-          <Link to='work' smooth={true} duration={500}>
+          <Link
+            to='work'
+            activeStyle={{
+              fontWeight: 'bold',
+              borderBottom: '2px solid #b3317d',
+            }}
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             Work
           </Link>
         </li>
         <li>
-          <Link to='contact' smooth={true} duration={500}>
+          <Link
+            to='contact'
+            activeStyle={{
+              fontWeight: 'bold',
+              borderBottom: '2px solid #b3317d',
+            }}
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             Contact
           </Link>
         </li>
