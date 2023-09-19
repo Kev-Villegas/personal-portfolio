@@ -27,7 +27,6 @@ const Contact = () => {
   });
 
   const submitData = (data) => {
-    console.log('It Worked', data);
     fetch('https://getform.io/f/7673bb37-857a-443a-aaa3-92cde345d545', {
       method: 'POST',
       headers: {
