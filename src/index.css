@@ -23,11 +23,6 @@
     width: 300px;
     
 }
-
 .content-div:hover {
-    background-image: linear-gradient(
-        to right,
-        rgba(112, 157, 255, 0.8),
-        hsla(242, 74%, 61%, 0.8)   
-    )!important;
+    background-image: linear-gradient( 135.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% )!important;
 }
