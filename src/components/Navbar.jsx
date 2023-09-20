@@ -151,7 +151,7 @@ const Navbar = () => {
               href='https://www.linkedin.com/in/kevin--villegas/'
               target='_blank'
             >
-              Linkedin <FaLinkedin size={30} />
+              LinkedIn <FaLinkedin size={30} />
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
@@ -160,7 +160,7 @@ const Navbar = () => {
               href='https://github.com/Kev-Villegas'
               target='_blank'
             >
-              Github <FaGithub size={30} />
+              GitHub <FaGithub size={30} />
             </a>
           </li>
 

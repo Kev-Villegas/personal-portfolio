@@ -23,9 +23,10 @@ const About = () => {
           <div className='text-xl'>
             <p>
               {' '}
-              I'm a Front-End Developer with nearly 3 years of experience,
-              always in pursuit of knowledge and eager to challenge my skills. I
-              thrive on continuous learning and adapting to new technologies.
+              I'm a Front-End Developer with nearly 3 years of experience in web
+              development, always in pursuit of knowledge and eager to challenge
+              my skills. I thrive on continuous learning and adapting to new
+              technologies.
             </p>
           </div>
         </div>
