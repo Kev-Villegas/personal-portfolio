@@ -1,7 +1,6 @@
 import gameHub from '../assets/projects/gameHub.webp';
 import Portfolio from '../assets/projects/portfolioCover.webp';
 import ToDoList from '../assets/projects/toDoList.webp';
-` `;
 
 const Work = () => {
   return (
