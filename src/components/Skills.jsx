@@ -1,12 +1,12 @@
-import TypeScript from '../assets/typescript.png';
-import JavaScript from '../assets/javascript.png';
-import Tailwind from '../assets/tailwind.png';
-import ChakraUI from '../assets/chakraui.png';
-import ReactImg from '../assets/react.png';
-import HTML from '../assets/html.png';
-import Node from '../assets/node.png';
-import Git from '../assets/git.png';
-import CSS from '../assets/css.png';
+import TypeScript from '../assets/typescript.webp';
+import JavaScript from '../assets/javascript.webp';
+import Tailwind from '../assets/tailwind.webp';
+import ChakraUI from '../assets/chakraui.webp';
+import ReactImg from '../assets/react.webp';
+import HTML from '../assets/html.webp';
+import Node from '../assets/node.webp';
+import Git from '../assets/git.webp';
+import CSS from '../assets/css.webp';
 import React from 'react';
 
 const Skills = () => {
@@ -30,44 +30,44 @@ const Skills = () => {
             <p className='my-4'>HTML</p>
           </div>
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={CSS} alt='HTML icon' />
+            <img className='w-20 mx-auto' src={CSS} alt='CSS icon' />
             <p className='my-4'>CSS</p>
           </div>
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={Tailwind} alt='HTML icon' />
+            <img className='w-20 mx-auto' src={Tailwind} alt='Tailwind icon' />
             <p className='my-4'>Tailwind CSS</p>
           </div>
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={ChakraUI} alt='HTML icon' />
+            <img className='w-20 mx-auto' src={ChakraUI} alt='Chakra icon' />
             <p className='my-4'>Chakra UI</p>
           </div>
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img
               className='w-20 mx-auto rounded-sm'
               src={JavaScript}
-              alt='HTML icon'
+              alt='JavaScript icon'
             />
             <p className='my-4'>JavaScript</p>
           </div>
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={ReactImg} alt='HTML icon' />
+            <img className='w-20 mx-auto' src={ReactImg} alt='Reactjs icon' />
             <p className='my-4'>React.js</p>
           </div>
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img
               className='w-20 mx-auto rounded-sm'
               src={TypeScript}
-              alt='HTML icon'
+              alt='TypeScript icon'
             />
             <p className='my-4'>TypeScript</p>
           </div>
 
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={Node} alt='HTML icon' />
+            <img className='w-20 mx-auto' src={Node} alt='Nodejs icon' />
             <p className='my-4'>Node.js</p>
           </div>
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className='w-20 mx-auto' src={Git} alt='HTML icon' />
+            <img className='w-20 mx-auto' src={Git} alt='Git icon' />
             <p className='my-4'>Git</p>
           </div>
         </div>
