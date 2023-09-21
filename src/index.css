@@ -4,25 +4,26 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    body {
-        @apply font-[Raleway];
-    }
-    li {
-        @apply px-4;
-        @apply cursor-pointer
-    }
+  body {
+    @apply font-[Raleway];
+  }
+  li {
+    @apply px-4;
+    @apply cursor-pointer;
+  }
 }
 
-.content-div {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    height: 200px;
-    width: 300px;
-    
+.content-div { 
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 225px;
 }
 .content-div:hover {
-    background-image: linear-gradient( 135.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% )!important;
+  background-image: linear-gradient(
+    135.3deg,
+    rgba(26, 33, 64, 1) 10.9%,
+    rgba(81, 84, 115, 1) 87.1%
+  ) !important;
 }
