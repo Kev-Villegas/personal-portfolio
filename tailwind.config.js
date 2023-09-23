@@ -13,7 +13,7 @@ export default {
 
       // Medium size laptops and screens
       lg: '1024px',
-      // => @media (min-width: 992px) { ... }
+      // => @media (min-width: 1024px) { ... }
 
       // Pantallas más grandes como las de escritorio
       xl: '1280px',
