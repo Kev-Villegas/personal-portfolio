@@ -3,18 +3,23 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     screens: {
-      'sm': '480px',
+      // Small devices such as mobile phones
+      sm: '480px',
       // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
+      // Larger devices like tablets
+      md: '768px',
       // => @media (min-width: 768px) { ... }
 
-      'lg': '992',
+      // Medium size laptops and screens
+      lg: '1024px',
       // => @media (min-width: 992px) { ... }
 
-      'xl': '1280px',
+      // Pantallas más grandes como las de escritorio
+      xl: '1280px',
       // => @media (min-width: 1280px) { ... }
 
+      // Extra large screens or high resolution screens
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
