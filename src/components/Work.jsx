@@ -25,12 +25,12 @@ const Work = () => {
                 Game Discovery App
               </span>
               <div className='pt-8 text-center'>
-                <a href='https://video-game-discovery-app-liard.vercel.app/'>
+                <a href='https://video-game-discovery-app-liard.vercel.app/' target='_blank'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='https://github.com/Kev-Villegas/videoGames-discovery-app'>
+                <a href='https://github.com/Kev-Villegas/videoGames-discovery-app' target='_blank'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
@@ -50,12 +50,12 @@ const Work = () => {
                 Portfolio
               </span>
               <div className='pt-8 text-center'>
-                <a href='https://personal-portfolio-rk2wfn9i7-kev-villegas.vercel.app/'>
+                <a href='https://personal-portfolio-alpha-henna.vercel.app/' target='_blank'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='https://github.com/Kev-Villegas/personal-portfolio'>
+                <a href='https://github.com/Kev-Villegas/personal-portfolio'  target='_blank'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
@@ -74,12 +74,12 @@ const Work = () => {
                 To-Do List
               </span>
               <div className='pt-8 text-center'>
-                <a href='https://to-do-list-rouge-phi.vercel.app/'>
+                <a href='https://to-do-list-rouge-phi.vercel.app/'  target='_blank'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='https://github.com/Kev-Villegas/to-do-list'>
+                <a href='https://github.com/Kev-Villegas/to-do-list'  target='_blank'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
