@@ -7,6 +7,7 @@ import HTML from '../assets/html.webp';
 import Node from '../assets/node.webp';
 import Git from '../assets/git.webp';
 import CSS from '../assets/css.webp';
+import Next from '../assets/next.webp';
 import React from 'react';
 
 const Skills = () => {
@@ -61,10 +62,13 @@ const Skills = () => {
             />
             <p className='my-4'>TypeScript</p>
           </div>
-
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img className='w-20 mx-auto' src={Node} alt='Nodejs icon' />
             <p className='my-4'>Node.js</p>
+          </div>
+          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+            <img className='w-20 mx-auto' src={Next} alt='Nodejs icon' />
+            <p className='my-4'>Next.js</p>
           </div>
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img className='w-20 mx-auto' src={Git} alt='Git icon' />
