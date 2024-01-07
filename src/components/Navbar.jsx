@@ -1,5 +1,6 @@
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { FaBehanceSquare } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 import { useState } from 'react';
 
@@ -197,7 +198,15 @@ const Navbar = () => {
               GitHub <FaGithub size={30} />
             </a>
           </li>
-
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
+            <a
+              className='flex justify-between items-center w-full text-gray-300'
+              href='https://www.behance.net/kevinvillegas1973'
+              target='_blank'
+            >
+              Behance <FaBehanceSquare size={30} />
+            </a>
+          </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
