@@ -1,12 +1,25 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 
-interface Props {
+interface RevealProps {
   children: JSX.Element;
   width?: 'fit-content' | '100%';
+  mainVariants?: Record<string, any>;
+  slideVariants?: Record<string, any>;
 }
 
-export const Reveal = ({ children, width = 'fit-content' }: Props) => {
+export const Reveal: React.FC<RevealProps> = ({
+  children,
+  width = 'fit-content',
+  mainVariants = {
+    hidden: { opacity: 0, y: 75 },
+    visible: { opacity: 1, y: 0 },
+  },
+  slideVariants = {
+    hidden: { left: 0 },
+    visible: { left: '100%' },
+  },
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -22,10 +35,7 @@ export const Reveal = ({ children, width = 'fit-content' }: Props) => {
   return (
     <div ref={ref} style={{ position: 'relative', width, overflow: 'hidden' }}>
       <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
-        }}
+        variants={mainVariants}
         initial='hidden'
         animate={mainControls}
         transition={{ duration: 0.5, delay: 0.25 }}
@@ -33,10 +43,7 @@ export const Reveal = ({ children, width = 'fit-content' }: Props) => {
         {children}
       </motion.div>
       <motion.div
-        variants={{
-          hidden: { left: 0 },
-          visible: { left: '100%' },
-        }}
+        variants={slideVariants}
         initial='hidden'
         animate={slideControls}
         transition={{ duration: 0.5, ease: 'easeIn' }}
@@ -46,7 +53,7 @@ export const Reveal = ({ children, width = 'fit-content' }: Props) => {
           bottom: 4,
           left: 0,
           right: 0,
-          background: '#FFF',
+          background: '#071a2b',
           zIndex: 20,
         }}
       />
