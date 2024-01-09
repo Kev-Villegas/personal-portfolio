@@ -14,7 +14,7 @@
   }
 }
 
-.content-div { 
+.content-div {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -26,4 +26,15 @@
     rgba(26, 33, 64, 1) 10.9%,
     rgba(81, 84, 115, 1) 87.1%
   ) !important;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: #0a192f;
+  z-index: 1000; /* Ajusta según sea necesario, un valor alto para estar por encima de otros elementos */
+}
+
+/* Estilos adicionales cuando haces scroll (opcional) */
+.navbar-scroll {
+  background-color: #0a192f;
 }
