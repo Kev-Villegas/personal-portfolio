@@ -54,10 +54,10 @@ const Contact = () => {
         className='flex flex-col max-w-[600px] w-full'
       >
         <div className='pb-2'>
-          <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300'>
+          <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300 font-lato'>
             Contact
           </p>
-          <p className='text-gray-300 pt-4'>
+          <p className='text-gray-300 py-4 font-montserrat font-medium text-base'>
             Please fill out the form or check my social networks if you want to
             contact me.
           </p>

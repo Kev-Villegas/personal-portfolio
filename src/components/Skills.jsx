@@ -25,10 +25,10 @@ const Skills = () => {
       <div className='max-w-[1000px] mx-auto p-8 flex flex-col justify-center w-full h-calc(90vh)'>
         <div>
           <Reveal>
-            <p className='text-4xl font-bold inline border-b-4 border-pink-600 '>
+            <p className='text-4xl font-bold inline border-b-4 border-pink-600 font-lato '>
               Skills
             </p>
-            <p className='py-6 text-xl font-semibold '>
+            <p className='py-6 text-xl font-montserrat font-medium '>
               Technologies that I usually use
             </p>
           </Reveal>
@@ -90,7 +90,7 @@ const Skills = () => {
         </div>
         <div>
           <Reveal>
-            <p className='py-6 text-xl font-semibold'>
+            <p className='py-6 text-xl font-montserrat font-medium'>
               Tools that I usually use
             </p>
           </Reveal>

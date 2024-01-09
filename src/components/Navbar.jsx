@@ -20,13 +20,13 @@ const Navbar = () => {
           smooth={true}
           duration={500}
         >
-          <h3 className='cursor-pointer font-bold text-xl'>KV</h3>
+          <h3 className='cursor-pointer font-bold font-nunito text-xl'>KV</h3>
         </Link>
       </div>
 
       {/* menu */}
       <ul className='hidden md:flex'>
-        <li className='font-medium'>
+        <li className='font-nunito'>
           <Link
             to='home'
             activeStyle={{
@@ -40,14 +40,13 @@ const Navbar = () => {
             Home
           </Link>
         </li>
-        <li className='font-medium'>
+        <li className='font-nunito'>
           <Link
             to='about'
             activeStyle={{
               fontWeight: 'bold',
               borderBottom: '2px solid #b3317d',
             }}
-          
             spy={true}
             smooth={true}
             duration={500}
@@ -55,14 +54,13 @@ const Navbar = () => {
             About
           </Link>
         </li>
-        <li className='font-medium'>
+        <li className='font-nunito'>
           <Link
             to='services'
             activeStyle={{
               fontWeight: 'bold',
               borderBottom: '2px solid #b3317d',
             }}
-         
             spy={true}
             smooth={true}
             duration={500}
@@ -70,14 +68,13 @@ const Navbar = () => {
             Services
           </Link>
         </li>
-        <li className='font-medium'>
+        <li className='font-nunito'>
           <Link
             to='skills'
             activeStyle={{
               fontWeight: 'bold',
               borderBottom: '2px solid #b3317d',
             }}
-          
             spy={true}
             smooth={true}
             duration={500}
@@ -85,14 +82,13 @@ const Navbar = () => {
             Skills
           </Link>
         </li>
-        <li className='font-medium'>
+        <li className='font-nunito'>
           <Link
             to='work'
             activeStyle={{
               fontWeight: 'bold',
               borderBottom: '2px solid #b3317d',
             }}
-           
             spy={true}
             smooth={true}
             duration={500}
@@ -100,7 +96,7 @@ const Navbar = () => {
             Work
           </Link>
         </li>
-        <li className='font-medium'>
+        <li className='font-nunito'>
           <Link
             to='contact'
             activeStyle={{
