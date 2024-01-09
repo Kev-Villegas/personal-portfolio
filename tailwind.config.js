@@ -41,6 +41,13 @@ export default {
       neutral: colors.slate,
       stone: colors.stone,
     },
+    extend: {
+      fontFamily: {
+        lato: "'Lato', sans-serif",
+        montserrat: "'Montserrat', sans-serif",
+        nunito: "'Nunito', sans-serif",
+      },
+    },
   },
   plugins: [],
 };
