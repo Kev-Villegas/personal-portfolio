@@ -1,28 +1,37 @@
 import TypeScript from '../assets/typescript.webp';
 import JavaScript from '../assets/javascript.webp';
+import Wordpress from '../assets/wordpress.webp';
+import Elementor from '../assets/elementor.webp';
 import Tailwind from '../assets/tailwind.webp';
 import ChakraUI from '../assets/chakraui.webp';
 import ReactImg from '../assets/react.webp';
+import Github from '../assets/github.webp';
+import Figma from '../assets/figma.webp';
+import { Reveal } from './utils/Reveal';
 import HTML from '../assets/html.webp';
 import Node from '../assets/node.webp';
+import Next from '../assets/next.webp';
 import Git from '../assets/git.webp';
 import CSS from '../assets/css.webp';
-import Next from '../assets/next.webp';
 import React from 'react';
 
 const Skills = () => {
   return (
     <div
       name='skills'
-      className='w-full h-calc(90vh) bg-[#0a192f] text-gray-300'
+      className='w-full h-calc(90vh) px-6 py-6 mx-auto bg-[#0a192f] text-gray-300'
     >
       {/* Container */}
-      <div className='max-w-[1000px] mx-auto p-8 flex flex-col justify-center w-full h-full'>
+      <div className='max-w-[1000px] mx-auto p-8 flex flex-col justify-center w-full h-calc(90vh)'>
         <div>
-          <p className='text-4xl font-bold inline border-b-4 border-pink-600 '>
-            Skills
-          </p>
-          <p className='py-4 text-xl'>My Current Stack: </p>
+          <Reveal>
+            <p className='text-4xl font-bold inline border-b-4 border-pink-600 '>
+              Skills
+            </p>
+            <p className='py-6 text-xl font-semibold '>
+              Technologies that I usually use
+            </p>
+          </Reveal>
         </div>
 
         <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
@@ -73,6 +82,31 @@ const Skills = () => {
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img className='w-20 mx-auto' src={Git} alt='Git icon' />
             <p className='my-4'>Git</p>
+          </div>
+          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+            <img className='w-20 mx-auto' src={Github} alt='Git icon' />
+            <p className='my-4'>GitHub</p>
+          </div>
+        </div>
+        <div>
+          <Reveal>
+            <p className='py-6 text-xl font-semibold'>
+              Tools that I usually use
+            </p>
+          </Reveal>
+          <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
+            <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+              <img className='w-20 mx-auto' src={Wordpress} alt='Git icon' />
+              <p className='my-4'>Wordpress</p>
+            </div>
+            <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+              <img className='w-20 mx-auto' src={Elementor} alt='Git icon' />
+              <p className='my-4'>Elementor</p>
+            </div>
+            <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+              <img className='w-20 mx-auto' src={Figma} alt='Git icon' />
+              <p className='my-4'>Figma</p>
+            </div>
           </div>
         </div>
       </div>

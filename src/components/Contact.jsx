@@ -47,7 +47,7 @@ const Contact = () => {
   return (
     <div
       name='contact'
-      className='w-full h-screen bg-[#0a192f] flex justify-center items-center p-4'
+      className='w-full h-calc(90vh) px-10 py-10 bg-[#0a192f] flex justify-center items-center p-4'
     >
       <form
         onSubmit={handleSubmit(submitData)}
@@ -57,8 +57,9 @@ const Contact = () => {
           <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300'>
             Contact
           </p>
-          <p className='text-gray-300 py-4'>
-            Please Fill The Email To Contact Me!
+          <p className='text-gray-300 pt-4'>
+            Please fill out the form or check my social networks if you want to
+            contact me.
           </p>
         </div>
         <input

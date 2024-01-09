@@ -6,19 +6,19 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div name='home' className='w-full h-screen bg-[#0a192f]'>
+    <div name='home' className='w-full h-screen px-6 py-6 bg-[#0a192f]'>
       {/* Container */}
-      <div className='max-w-[1000px] mx-auto px-4 flex flex-col justify-center h-full'>
+      <div className='max-w-[1000px] mx-auto px-4 flex flex-col justify-center h-screen '>
         <Reveal>
-          <p className='text-pink-600 text-2xl'>Hi, My Name Is</p>
+          <p className='text-pink-600 text-xl font-semibold'>Hi, My Name Is</p>
 
-          <h1 className='text-4xl sm:text-7xl font-bold text-gray-200'>
+          <h1 className='text-4xl sm:text-6xl font-bold text-gray-200'>
             Kevin Villegas
           </h1>
-          <h2 className='text-4xl sm:text-7xl font-bold text-gray-300'>
+          <h2 className='text-4xl sm:text-6xl font-bold text-gray-300'>
             I'm a Front-End Developer.
           </h2>
-          <p className='text-gray-400 py-4 text-xl max-w-[800px]'>
+          <p className='text-gray-400 py-4 text-lg max-w-[800px]'>
             Front-End Developer Specializing in building and ocassionally
             designing exepcional digital experiences. Currently, I'm focused on
             become a Full-Stack Developer!

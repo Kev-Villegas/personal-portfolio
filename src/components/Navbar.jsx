@@ -9,25 +9,24 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className='pl-10 fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
+    <div className='pl-10 fixed w-full h-[75px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-50'>
       <div>
         <Link
           to='home'
           activeStyle={{
             fontWeight: 'bold',
           }}
-          offset={-50}
           spy={true}
           smooth={true}
           duration={500}
         >
-          <h3 className='cursor-pointer'>KV</h3>
+          <h3 className='cursor-pointer font-bold text-xl'>KV</h3>
         </Link>
       </div>
 
       {/* menu */}
       <ul className='hidden md:flex'>
-        <li>
+        <li className='font-medium'>
           <Link
             to='home'
             activeStyle={{
@@ -41,14 +40,14 @@ const Navbar = () => {
             Home
           </Link>
         </li>
-        <li>
+        <li className='font-medium'>
           <Link
             to='about'
             activeStyle={{
               fontWeight: 'bold',
               borderBottom: '2px solid #b3317d',
             }}
-            offset={-50}
+          
             spy={true}
             smooth={true}
             duration={500}
@@ -56,14 +55,29 @@ const Navbar = () => {
             About
           </Link>
         </li>
-        <li>
+        <li className='font-medium'>
+          <Link
+            to='services'
+            activeStyle={{
+              fontWeight: 'bold',
+              borderBottom: '2px solid #b3317d',
+            }}
+         
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            Services
+          </Link>
+        </li>
+        <li className='font-medium'>
           <Link
             to='skills'
             activeStyle={{
               fontWeight: 'bold',
               borderBottom: '2px solid #b3317d',
             }}
-            offset={-50}
+          
             spy={true}
             smooth={true}
             duration={500}
@@ -71,14 +85,14 @@ const Navbar = () => {
             Skills
           </Link>
         </li>
-        <li>
+        <li className='font-medium'>
           <Link
             to='work'
             activeStyle={{
               fontWeight: 'bold',
               borderBottom: '2px solid #b3317d',
             }}
-            offset={-70}
+           
             spy={true}
             smooth={true}
             duration={500}
@@ -86,7 +100,7 @@ const Navbar = () => {
             Work
           </Link>
         </li>
-        <li>
+        <li className='font-medium'>
           <Link
             to='contact'
             activeStyle={{
@@ -105,7 +119,7 @@ const Navbar = () => {
 
       {/* Hamburger */}
       <div onClick={handleClick} className='md:hidden z-10'>
-        {!nav ? <FaBars /> : <FaTimes />}
+        {!nav ? <FaBars size={20} /> : <FaTimes size={20} />}
       </div>
 
       {/* Mobile menu */}
@@ -116,7 +130,7 @@ const Navbar = () => {
             : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
         }
       >
-        <li className='py-6 text-4xl'>
+        <li className='py-6 font-semibold text-2xl'>
           <Link
             offset={-50}
             onClick={handleClick}
@@ -127,8 +141,7 @@ const Navbar = () => {
             Home
           </Link>
         </li>
-        <li className='py-6 text-4xl'>
-          {' '}
+        <li className='py-6 font-semibold text-2xl'>
           <Link
             offset={-50}
             onClick={handleClick}
@@ -139,8 +152,18 @@ const Navbar = () => {
             About
           </Link>
         </li>
-        <li className='py-6 text-4xl'>
-          {' '}
+        <li className='py-6 font-semibold text-2xl'>
+          <Link
+            offset={-50}
+            onClick={handleClick}
+            to='services'
+            smooth={true}
+            duration={500}
+          >
+            Services
+          </Link>
+        </li>
+        <li className='py-6 font-semibold text-2xl'>
           <Link
             offset={-50}
             onClick={handleClick}
@@ -151,8 +174,7 @@ const Navbar = () => {
             Skills
           </Link>
         </li>
-        <li className='py-6 text-4xl'>
-          {' '}
+        <li className='py-6 font-semibold text-2xl'>
           <Link
             offset={-50}
             onClick={handleClick}
@@ -163,8 +185,7 @@ const Navbar = () => {
             Work
           </Link>
         </li>
-        <li className='py-6 text-4xl'>
-          {' '}
+        <li className='py-6 font-semibold text-2xl'>
           <Link
             offset={-50}
             onClick={handleClick}
@@ -176,7 +197,6 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-
       {/* Social icons */}
       <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
         <ul>

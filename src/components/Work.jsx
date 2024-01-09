@@ -4,8 +4,11 @@ import ToDoList from '../assets/projects/toDoList.webp';
 
 const Work = () => {
   return (
-    <div name='work' className='w-full h-calc(90vh) text-gray-300 bg-[#0A192F]'>
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
+    <div
+      name='work'
+      className='w-fullh-calc(90vh) px-6 py-6 bg-[#0a192f] text-gray-300'
+    >
+      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-calc(90vh)'>
         <div className='pb-8'>
           <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600 '>
             Work
@@ -25,12 +28,18 @@ const Work = () => {
                 Game Discovery App
               </span>
               <div className='pt-8 text-center'>
-                <a href='https://video-game-discovery-app-liard.vercel.app/' target='_blank'>
+                <a
+                  href='https://video-game-discovery-app-liard.vercel.app/'
+                  target='_blank'
+                >
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='https://github.com/Kev-Villegas/videoGames-discovery-app' target='_blank'>
+                <a
+                  href='https://github.com/Kev-Villegas/videoGames-discovery-app'
+                  target='_blank'
+                >
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
@@ -50,12 +59,18 @@ const Work = () => {
                 Portfolio
               </span>
               <div className='pt-8 text-center'>
-                <a href='https://personal-portfolio-alpha-henna.vercel.app/' target='_blank'>
+                <a
+                  href='https://personal-portfolio-alpha-henna.vercel.app/'
+                  target='_blank'
+                >
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='https://github.com/Kev-Villegas/personal-portfolio'  target='_blank'>
+                <a
+                  href='https://github.com/Kev-Villegas/personal-portfolio'
+                  target='_blank'
+                >
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
@@ -74,12 +89,18 @@ const Work = () => {
                 To-Do List
               </span>
               <div className='pt-8 text-center'>
-                <a href='https://to-do-list-rouge-phi.vercel.app/'  target='_blank'>
+                <a
+                  href='https://to-do-list-rouge-phi.vercel.app/'
+                  target='_blank'
+                >
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='https://github.com/Kev-Villegas/to-do-list'  target='_blank'>
+                <a
+                  href='https://github.com/Kev-Villegas/to-do-list'
+                  target='_blank'
+                >
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
