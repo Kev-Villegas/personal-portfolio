@@ -11,16 +11,10 @@ const Navbar = () => {
   return (
     <div className='pl-10 fixed w-full h-[75px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-50'>
       <div>
-        <Link
-          to='home'
-          activeStyle={{
-            fontWeight: 'bold',
-          }}
-          spy={true}
-          smooth={true}
-          duration={500}
-        >
-          <h3 className='cursor-pointer font-bold font-nunito text-xl'>KV</h3>
+        <Link to='home' offset={0} spy={true} smooth={true} duration={500}>
+          <h3 className='cursor-pointer font-semibold font-nunito text-xl'>
+            KV
+          </h3>
         </Link>
       </div>
 
@@ -29,13 +23,12 @@ const Navbar = () => {
         <li className='font-nunito'>
           <Link
             to='home'
-            activeStyle={{
-              fontWeight: 'bold',
-              borderBottom: '2px solid #b3317d',
-            }}
-            spy={true}
             smooth={true}
             duration={500}
+            offset={0}
+            spy={true}
+            style={{ transition: 'color 0.3s' }}
+            className='hover:text-blue-500'
           >
             Home
           </Link>
@@ -43,13 +36,12 @@ const Navbar = () => {
         <li className='font-nunito'>
           <Link
             to='about'
-            activeStyle={{
-              fontWeight: 'bold',
-              borderBottom: '2px solid #b3317d',
-            }}
-            spy={true}
             smooth={true}
             duration={500}
+            offset={-175}
+            spy={true}
+            style={{ transition: 'color 0.3s' }}
+            className='hover:text-blue-500'
           >
             About
           </Link>
@@ -57,13 +49,12 @@ const Navbar = () => {
         <li className='font-nunito'>
           <Link
             to='services'
-            activeStyle={{
-              fontWeight: 'bold',
-              borderBottom: '2px solid #b3317d',
-            }}
-            spy={true}
             smooth={true}
             duration={500}
+            offset={70}
+            spy={true}
+            style={{ transition: 'color 0.3s' }}
+            className='hover:text-blue-500'
           >
             Services
           </Link>
@@ -71,13 +62,12 @@ const Navbar = () => {
         <li className='font-nunito'>
           <Link
             to='skills'
-            activeStyle={{
-              fontWeight: 'bold',
-              borderBottom: '2px solid #b3317d',
-            }}
-            spy={true}
             smooth={true}
             duration={500}
+            offset={-30}
+            spy={true}
+            style={{ transition: 'color 0.3s' }}
+            className='hover:text-blue-500'
           >
             Skills
           </Link>
@@ -85,13 +75,11 @@ const Navbar = () => {
         <li className='font-nunito'>
           <Link
             to='work'
-            activeStyle={{
-              fontWeight: 'bold',
-              borderBottom: '2px solid #b3317d',
-            }}
-            spy={true}
             smooth={true}
             duration={500}
+            offset={-150}
+            style={{ transition: 'color 0.3s' }}
+            className='hover:text-blue-500'
           >
             Work
           </Link>
@@ -99,14 +87,12 @@ const Navbar = () => {
         <li className='font-nunito'>
           <Link
             to='contact'
-            activeStyle={{
-              fontWeight: 'bold',
-              borderBottom: '2px solid #b3317d',
-            }}
-            offset={-50}
-            spy={true}
             smooth={true}
             duration={500}
+            offset={-75}
+            spy={true}
+            style={{ transition: 'color 0.3s' }}
+            className='hover:text-blue-500'
           >
             Contact
           </Link>
@@ -139,7 +125,7 @@ const Navbar = () => {
         </li>
         <li className='py-6 font-semibold text-2xl'>
           <Link
-            offset={-50}
+            offset={-425}
             onClick={handleClick}
             to='about'
             smooth={true}
@@ -150,7 +136,7 @@ const Navbar = () => {
         </li>
         <li className='py-6 font-semibold text-2xl'>
           <Link
-            offset={-50}
+            offset={125}
             onClick={handleClick}
             to='services'
             smooth={true}
