@@ -15,7 +15,7 @@ const Services = () => {
           <h1 className='text-4xl font-bold inline border-b-4 border-pink-600 font-lato'>
             Services I Offer
           </h1>
-          <h2 className='text-lg text-gray-300 px-4 py-2 font-montserrat'>
+          <h2 className='text-lg text-gray-300 px-4 py-6 font-montserrat'>
             Take a look at the services I offer and take your website business
             to the next level
           </h2>
