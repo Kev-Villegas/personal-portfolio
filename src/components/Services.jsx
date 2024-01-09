@@ -32,18 +32,24 @@ const Services = () => {
                   <h3 className='text-xl font-lato font-bold'>
                     SEO & Optimization
                   </h3>
-                  <ul className='text-sm text-gray-500 dark:text-gray-400 space-y-2 font-montserrat'>
+                  <ul className='text-sm text-gray-400 dark:text-gray-400 space-y-2 font-montserrat'>
                     <li className='flex items-center text-base'>
-                      <FaCheck size={20} className='mr-2 font-bold' />
-                      Better visibility in search engines.
+                      <FaCheck size={20} className='mx-2 font-bold' />
+                      <p className='font-montserrat'>
+                        Better visibility in search engines.
+                      </p>
                     </li>
                     <li className='flex items-center text-base'>
-                      <FaCheck size={18} className='mr-2 font-bold' />
-                      Targeted traffic increase.
+                      <FaCheck size={18} className='mx-2 font-bold' />
+                      <p className='font-montserrat'>
+                        Targeted traffic increase.
+                      </p>
                     </li>
                     <li className='flex items-center text-base'>
-                      <FaCheck size={32} className='mr-2 font-bold' />
-                      Enhanced user experience and better engagement.
+                      <FaCheck size={32} className='mx-2 font-bold' />
+                      <p className='font-montserrat'>
+                        Enhanced user experience and better engagement.
+                      </p>
                     </li>
                   </ul>
                 </div>
@@ -54,20 +60,25 @@ const Services = () => {
               >
                 <div className='flex flex-col items-center space-y-4 p-4'>
                   <TfiPaintRoller size={50} />
-
                   <h3 className='text-xl font-lato font-bold'>UX & UI</h3>
-                  <ul className='text-sm text-gray-500 dark:text-gray-400 space-y-2 font-montserrat'>
+                  <ul className='text-sm text-gray-400 dark:text-gray-400 space-y-2 font-montserrat'>
                     <li className='flex items-center text-base'>
-                      <FaCheck size={28} className='mr-2 font-bold' />
-                      Intuitive and visually appealing design.
+                      <FaCheck size={28} className='mx-2 font-bold' />
+                      <p className='font-montserrat'>
+                        Intuitive and visually appealing design.
+                      </p>
                     </li>
                     <li className='flex items-center text-base'>
-                      <FaCheck size={30} className='mr-2 font-bold' />
-                      Improve the user satisfaction and engagement.
+                      <FaCheck size={30} className='mx-2 font-bold' />
+                      <p className='font-montserrat'>
+                        Improve the user satisfaction and engagement.
+                      </p>
                     </li>
                     <li className='flex items-center text-base'>
-                      <FaCheck size={23} className='mr-2 font-bold' />
-                      Conversion-focused user interface.
+                      <FaCheck size={23} className='mx-2 font-bold' />
+                      <p className='font-montserrat'>
+                        Conversion-focused user interface.
+                      </p>
                     </li>
                   </ul>
                 </div>
@@ -81,18 +92,24 @@ const Services = () => {
                   <h3 className='text-xl font-lato font-bold'>
                     Responsive Design
                   </h3>
-                  <ul className='text-sm text-gray-500 dark:text-gray-400 space-y-2 font-montserrat'>
+                  <ul className='text-sm text-gray-400 dark:text-gray-400 space-y-2'>
                     <li className='flex items-center text-base'>
-                      <FaCheck size={25} className='mr-2 font-bold' />
-                      Seamless user experience across devices.
+                      <FaCheck size={30} className='mx-2 font-bold' />
+                      <p className='font-montserrat'>
+                        Versatile and responsive design for all devices.
+                      </p>
                     </li>
                     <li className='flex items-center text-base'>
-                      <FaCheck size={16} className='mr-2 font-bold' />
-                      Mobile-friendly layouts.
+                      <FaCheck size={18} className='mx-2 font-bold' />
+                      <p className='font-montserrat'>
+                        Mobile-friendly layouts.
+                      </p>
                     </li>
                     <li className='flex items-center text-base'>
-                      <FaCheck size={20} className='mr-2 font-bold' />
-                      Improved accessibility and reach.
+                      <FaCheck size={22} className='mx-2 font-bold' />
+                      <p className='font-montserrat'>
+                        Enhanced accessibility and reach.
+                      </p>
                     </li>
                   </ul>
                 </div>
