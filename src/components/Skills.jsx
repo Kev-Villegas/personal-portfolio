@@ -7,10 +7,11 @@ import ChakraUI from '../assets/chakraui.webp';
 import ReactImg from '../assets/react.webp';
 import Github from '../assets/github.webp';
 import Figma from '../assets/figma.webp';
-// import { Reveal } from './utils/Reveal';
 import HTML from '../assets/html.webp';
 import Node from '../assets/node.webp';
 import Next from '../assets/next.webp';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../variants';
 import Git from '../assets/git.webp';
 import CSS from '../assets/css.webp';
 import React from 'react';
@@ -19,20 +20,31 @@ const Skills = () => {
   return (
     <div
       name='skills'
-      className='w-full h-full px-6 py-6 mx-auto bg-[#0a192f] text-gray-300'
+      className='w-full  min-h-screen px-6 mx-auto bg-[#0a192f] text-gray-300'
     >
       {/* Container */}
-      <div className='max-w-[1000px] mx-auto p-8 flex flex-col justify-center w-full h-full'>
-        <div>
-          <p className='text-4xl font-bold inline border-b-4 border-pink-600 font-lato '>
+      <div className='max-w-[1000px] mx-auto p-8 flex flex-col justify-center w-full '>
+        <motion.div
+          variants={fadeIn('right', 0.3)}
+          initial='hidden'
+          whileInView={'show'}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <p className='text-4xl font-bold inline border-b-[3px] border-pink-600 font-lato '>
             Skills
           </p>
           <p className='py-6 text-xl font-montserrat font-medium '>
             Technologies that I usually use
           </p>
-        </div>
+        </motion.div>
 
-        <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
+        <motion.div
+          variants={fadeIn('right', 0.3)}
+          initial='hidden'
+          whileInView={'show'}
+          viewport={{ once: true, amount: 0.3 }}
+          className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'
+        >
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img className='w-20 mx-auto' src={HTML} alt='HTML icon' />
             <p className='my-4'>HTML</p>
@@ -85,8 +97,13 @@ const Skills = () => {
             <img className='w-20 mx-auto' src={Github} alt='Git icon' />
             <p className='my-4'>GitHub</p>
           </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          variants={fadeIn('right', 0.3)}
+          initial='hidden'
+          whileInView={'show'}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <p className='py-6 text-xl font-montserrat font-medium'>
             Tools that I usually use
           </p>
@@ -104,7 +121,7 @@ const Skills = () => {
               <p className='my-4'>Figma</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

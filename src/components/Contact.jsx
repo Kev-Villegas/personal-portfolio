@@ -3,6 +3,8 @@ import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Swal from 'sweetalert2';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../variants';
 
 const Contact = () => {
   const schema = z.object({
@@ -47,14 +49,18 @@ const Contact = () => {
   return (
     <div
       name='contact'
-      className='w-full h-full px-10 py-10 bg-[#0a192f] flex justify-center items-center p-4'
+      className='w-full min-h-screen bg-[#0a192f] flex justify-center items-center px-8 py-8'
     >
-      <form
+      <motion.form
+        variants={fadeIn('right', 0.3)}
+        initial='hidden'
+        whileInView={'show'}
+        viewport={{ once: true, amount: 0.3 }}
         onSubmit={handleSubmit(submitData)}
         className='flex flex-col max-w-[700px] w-full'
       >
         <div className='pb-2'>
-          <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300 font-lato'>
+          <p className='text-4xl font-bold inline border-b-[3px] border-pink-600 text-gray-300 font-lato'>
             Contact
           </p>
           <p className='text-gray-300 py-4 font-montserrat font-medium text-base'>
@@ -98,7 +104,7 @@ const Contact = () => {
         >
           Send
         </button>
-      </form>
+      </motion.form>
     </div>
   );
 };

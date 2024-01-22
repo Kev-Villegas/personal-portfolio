@@ -1,16 +1,24 @@
 import gameHub from '../assets/projects/gameHub.webp';
 import Portfolio from '../assets/projects/portfolioCover.webp';
 import ToDoList from '../assets/projects/toDoList.webp';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../variants';
 
 const Work = () => {
   return (
     <div
       name='work'
-      className='w-full h-full px-4 py-4 bg-[#0a192f] text-gray-300'
+      className='w-full h-[450px] px-6 py-6 pl-12 bg-[#0a192f] text-gray-300'
     >
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
+      <motion.div
+        variants={fadeIn('left', 0.5)}
+        initial='hidden'
+        whileInView={'show'}
+        viewport={{ once: true, amount: 0.3 }}
+        className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full'
+      >
         <div>
-          <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600 font-lato'>
+          <p className='text-4xl font-bold inline border-b-[3px] border-pink-600 font-lato'>
             Work
           </p>
           <p className='py-4 md:text-xl sm:text-2xl font-montserrat font-medium'>
@@ -111,7 +119,7 @@ const Work = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
