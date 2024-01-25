@@ -1,14 +1,12 @@
-import { GoBriefcase } from 'react-icons/go';
-import { CiMail } from 'react-icons/ci';
-import { Link } from 'react-scroll';
-// import { Reveal } from './utils/Reveal';
-import { motion } from 'framer-motion';
-import { fadeIn } from '../variants';
-import React from 'react';
-import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import { useTypewriter } from 'react-simple-typewriter';
 import { FaBehanceSquare } from 'react-icons/fa';
+import { GoBriefcase } from 'react-icons/go';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
+import { CiMail } from 'react-icons/ci';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../variants';
+import { Link } from 'react-scroll';
 
 const Home = () => {
   const [typeEffect] = useTypewriter({
@@ -25,7 +23,7 @@ const Home = () => {
         initial='hidden'
         whileInView={'show'}
         viewport={{ once: true, amount: 0.3 }}
-        className='max-w-[1000px] mx-auto px-4 flex flex-col justify-center h-screen '
+        className='max-w-[1000px] mx-auto px-4 flex flex-col justify-center w-full h-screen'
       >
         <p className='text-pink-600 text-xl font-medium font-lato'>
           Hi, My Name Is
@@ -50,19 +48,25 @@ const Home = () => {
           className='flex'
         >
           <Link to='contact' smooth={true} duration={500} className='mr-4'>
-            <button
+            <motion.button
               type='button'
-              className='w-[180px] h-[50px] text-center justify-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className='md:w-[180px] h-[50px] text-center justify-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
             >
               <CiMail size={25} className='mr-[10px]' />
               <span>Contact Me</span>
-            </button>
+            </motion.button>
           </Link>
           <Link to='work' smooth={true} duration={500}>
-            <button className='flex items-center w-[155px] h-[50px] text-center justify-center  py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700'>
-              <GoBriefcase size={23} className='mr-[10px]' />
-              <span> Portfolio</span>
-            </button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className='md:w-[175px] h-[50px] flex items-center justify-center py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700'
+            >
+              <GoBriefcase size={23} className='mr-2' />
+              <span>Portfolio</span>
+            </motion.button>
           </Link>
         </motion.div>
         <motion.div
