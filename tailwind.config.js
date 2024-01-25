@@ -5,13 +5,16 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     screens: {
-      xxs: '0px', // Extra extra small
-      xs: '320px', // Extra small
-      sm: '576px', // Small
-      md: '768px', // Medium
-      lg: '1024px', // Large
-      xl: '1280px', // Extra large
-      '2xl': '1536px', // Extra extra large
+      xs: '320px',
+      sm: '640px',
+      md: '768px',
+      lg: '960px',
+      xl: '1200px',
+    },
+    container: {
+      padding: {
+        DEFAULT: '15px',
+      },
     },
     colors: {
       transparent: 'transparent',
@@ -43,9 +46,12 @@ export default {
     },
     extend: {
       fontFamily: {
-        lato: "'Lato', sans-serif",
-        montserrat: "'Montserrat', sans-serif",
-        nunito: "'Nunito', sans-serif",
+        lato: ['Lato', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        nunito: ['Nunito', 'sans-serif'],
+        primary: ['Lato', 'sans-serif'],
+        secondary: ['Montserrat', 'sans-serif'],
+        tertiary: ['Nunito', 'sans-serif'],
       },
     },
   },
