@@ -5,6 +5,13 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import Swal from 'sweetalert2';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
+import { RiWhatsappFill } from 'react-icons/ri';
+import { FaLinkedin } from 'react-icons/fa';
+import { IoLocation } from 'react-icons/io5';
+import { FaPhoneAlt } from 'react-icons/fa';
+import { FaBehanceSquare } from 'react-icons/fa';
+import { SiGmail } from 'react-icons/si';
+import { FaGithub } from 'react-icons/fa';
 
 const Contact = () => {
   const schema = z.object({
@@ -47,65 +54,124 @@ const Contact = () => {
       );
   };
   return (
-    <div
-      name='contact'
-      className='w-full min-h-screen bg-[#0a192f] flex justify-center items-center px-8 py-8'
+    <section
+      className='w-full h-[1400px] md:h-[1600px] lg:h-[900px] xs:h-[1400px] px-6 md:pt-56 bg-[#0a192f]'
+      id='contact'
     >
-      <motion.form
-        variants={fadeIn('right', 0.3)}
-        initial='hidden'
-        whileInView={'show'}
-        viewport={{ once: true, amount: 0.3 }}
-        onSubmit={handleSubmit(submitData)}
-        className='flex flex-col max-w-[700px] w-full'
-      >
-        <div className='pb-2'>
-          <p className='text-4xl font-bold inline border-b-[3px] border-pink-600 text-gray-300 font-lato'>
-            Contact
-          </p>
-          <p className='text-gray-300 py-4 font-montserrat font-medium text-base'>
-            Please fill out the form or check my social networks if you want to
-            contact me.
-          </p>
+      <div className='md:max-w-[500px] xs:max-w-[320px] mx-auto flex flex-col w-full h-full'>
+        <div className='py-4 xs:w-[320px]'>
+          <h1 className='text-4xl  text-white border-b-2 border-pink-600 inline'>
+            Contact Me
+          </h1>
         </div>
-        <input
-          {...register('name')}
-          className='bg-[#ccd6f6] p-2 rounded-md'
-          type='text'
-          placeholder='Name...'
-          name='name'
-        />
-        {errors.name && (
-          <span className='text-red-600'>{errors.name.message}</span>
-        )}
-        <input
-          {...register('email')}
-          className='my-4 p-2 bg-[#ccd6f6] rounded-md'
-          type='email'
-          placeholder='Email...'
-          name='email'
-        />
-        {errors.email && (
-          <span className='text-red-600'>{errors.email.message}</span>
-        )}
-        <textarea
-          {...register('message')}
-          className='bg-[#ccd6f6] p-2 rounded-md resize-none	'
-          name='message'
-          rows='10'
-          placeholder='Message...'
-        ></textarea>
-        {errors.message && (
-          <span className='text-red-600'>{errors.message.message}</span>
-        )}
-        <button
-          type='submit'
-          className='text-white rounded-md border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center'
-        >
-          Send
-        </button>
-      </motion.form>
-    </div>
+
+        {/* <div className='w-full'> */}
+          <div className='flex flex-col lg:flex-row w-[325px] '>
+            {/* Text & Image*/}
+            <div className='w-[400px] xs:w-[320px] justify-start mt-12 '>
+              <h4 className='text-xl uppercase text-accent font-medium mb-2 tracking-wide'>
+                Get in touch
+              </h4>
+              <h2 className='text-2xl leading-none mb-5 w-[320px] '>
+                Please Check My Socials Or Fill Out The Form If You Want To
+                Contact Me!
+              </h2>
+              <div className='space-y-4 text-center justify-center'>
+                <a className='flex items-center text-orange-600'>
+                  <IoLocation size={30} />
+                  <span className='font-medium font-montserrat text-lg px-3 py-1 text-gray-300'>
+                    Córdoba / Argentina
+                  </span>
+                </a>
+                <a
+                  href='https://www.behance.net/kevinvillegas1973'
+                  className='flex items-center text-blue-600'
+                  target='_blank'
+                >
+                  <FaBehanceSquare
+                    size={28}
+                    className='text-[#1769ff] cursor-pointer'
+                  />
+                  <span className='font-medium font-montserrat text-lg px-3 py-1 text-gray-300'>
+                    /kevin--villegas
+                  </span>
+                </a>
+                <a
+                  href='https://www.linkedin.com/in/kevin--villegas/'
+                  className='flex items-center'
+                  target='_blank'
+                >
+                  <FaLinkedin
+                    size={28}
+                    className='text-[#0077B5] cursor-pointer'
+                  />
+                  <span className='font-medium font-montserrat text-lg px-3 py-1 text-gray-300'>
+                    /kevinvillegas1973
+                  </span>
+                </a>
+                <a
+                  className='flex items-center text-orange-700'
+                  target='_blank'
+                >
+                  <SiGmail size={25} />
+                  <span className='font-medium font-montserrat text-lg px-3 py-1 text-gray-300'>
+                    kevin.villegas1973@gmail.com
+                  </span>
+                </a>
+              </div>
+            </div>
+            {/* Form Start */}
+            <form
+              className='flex flex-col w-[600px] xs:w-[320px] py-3'
+              onSubmit={handleSubmit(submitData)}
+            >
+              <label className='block mt-7'>
+                <span className='mb-1'>Full Name</span>
+              </label>
+              <input
+                {...register('name')}
+                className='bg-[#ccd6f6] p-2 rounded-md xs:w-[300px] sm:w-[600px] md:w-[500px] lg:w-[400px]'
+                type='text'
+                placeholder='Name...'
+                name='name'
+              />
+              {errors.name && (
+                <span className='text-red-600'>{errors.name.message}</span>
+              )}
+              <label className='block mt-7'>
+                <span className=''>Email Address</span>
+              </label>
+              <input
+                {...register('email')}
+                className='p-2 bg-[#ccd6f6] rounded-md xs:w-[300px] sm:w-[600px] md:w-[500px] lg:w-[400px]'
+                type='email'
+                placeholder='Email...'
+                name='email'
+              />
+              {errors.email && (
+                <span className='text-red-600'>{errors.email.message}</span>
+              )}
+              <label className='block mt-8'>
+                <span className=''>Your Message</span>
+              </label>
+              <textarea
+                {...register('message')}
+                className='bg-[#ccd6f6] p-2 rounded-md resize-none xs:w-[300px] sm:w-[600px] md:w-[500px] md:h-[100px] xs:h-[250px] lg:w-[400px] '
+                name='message'
+                rows='10'
+                placeholder='Message...'
+              ></textarea>
+              {errors.message && (
+                <span className='text-red-600'>{errors.message.message}</span>
+              )}
+              <button className='btn btn-outline px-4 py-4 mt-6 w-[150px] justify-center text-center'>
+                Send Message
+              </button>
+            </form>
+          {/* </div> */}
+        </div>
+      </div>
+    </section>
   );
 };
 
