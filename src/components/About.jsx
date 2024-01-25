@@ -1,6 +1,8 @@
+import { MdOutlineImportantDevices } from 'react-icons/md';
 import { useInView } from 'react-intersection-observer';
-import { FaSquareArrowUpRight } from 'react-icons/fa6';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { BiPaintRoll } from 'react-icons/bi';
+import { TbCode } from 'react-icons/tb';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import CountUp from 'react-countup';
@@ -10,24 +12,24 @@ import React from 'react';
 const services = [
   {
     id: 1,
+    icon: <TbCode size={30} />,
     name: 'Web Development',
     description:
       'With a focus on web development, I create visually appealing and functional websites. Let me transform your concepts into a compelling digital presence, enhancing your impact in the online realm.',
-    link: 'Learn More',
   },
   {
     id: 2,
+    icon: <BiPaintRoll size={30} />,
     name: 'UX/UI Designs',
     description:
       'Specializing in UX/UI design, I create intuitive interfaces blending aesthetics with functionality for engaging interactions. Lets shape an unforgettable user journey',
-    link: 'Learn More',
   },
   {
     id: 3,
+    icon: <MdOutlineImportantDevices size={30} />,
     name: 'Responsive Design',
     description:
       'I specialize in Responsive Design, crafting websites for flawless user experiences. Your site will captivate and function seamlessly on any screen.',
-    link: 'Learn More',
   },
 ];
 
@@ -37,7 +39,7 @@ const Services = () => {
   });
   return (
     <section
-      className='section min-h-screen w-full bg-[#0a192f] px-6 py-6'
+      className='section h-[1000px] md:h-[1100px] lg:h-[1200px] xs:h-[1800px] w-full bg-[#0a192f] px-6 py-6 pt-32'
       id='services'
       ref={ref}
     >
@@ -108,39 +110,31 @@ const Services = () => {
               </a>
             </button>
           </motion.div>
-          {/* Services */}
+          {/* Services Start*/}
           <motion.div
             variants={fadeIn('left', 0.5)}
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: true, amount: 0.3 }}
-            className='flex-1'
+            className='flex flex-col'
           >
             {/* Services List*/}
-            <div>
+            <div className='gap-12 xs:grid xs:grid-cols-1'>
               {services.map((service, index) => {
                 // destructure service
-                const { id, name, description, link } = service;
+                const { id, icon, name, description } = service;
                 return (
                   <div
-                    className='border-b border-white/20 h-[150px]  flex'
+                    className='border-b border-white/20 h-[250px] py-2'
                     key={index}
                   >
-                    <div className=' max-w-[476px] py-2 '>
-                      <h4 className='text-2xl tracking-wider font-lato font-semibold py-2'>
-                        {name}
+                    <div className=' max-w-[476px] py-2 h-[800px] '>
+                      <h4 className='text-2xl tracking-wider font-lato font-semibold py-2 mb-5'>
+                        {icon} {name}
                       </h4>
                       <p className='font-montserrat leading-tight'>
                         {description}
                       </p>
-                    </div>
-                    <div className='flex flex-col flex-1 items-end py-4 px-2'>
-                      <a href='#'>
-                        <FaSquareArrowUpRight size={25} />
-                      </a>
-                      <a className='text-gray-500 text-sm' href='#'>
-                        {link}
-                      </a>
                     </div>
                   </div>
                 );
