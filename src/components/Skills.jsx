@@ -20,10 +20,10 @@ const Skills = () => {
   return (
     <div
       name='skills'
-      className='w-full  min-h-screen px-6 mx-auto bg-[#0a192f] text-gray-300'
+      className='w-full h-[1000px] md:h-[1600px] lg:h-[800px] xs:h-[1800px] xs:pt-52 lg:pt-0 px-6 mx-auto bg-[#0a192f] text-gray-300'
     >
       {/* Container */}
-      <div className='max-w-[1000px] mx-auto p-8 flex flex-col justify-center w-full '>
+      <div className='max-w-[1000px] mx-auto p-8 flex flex-col justify-center w-full h-full '>
         <motion.div
           variants={fadeIn('right', 0.3)}
           initial='hidden'
