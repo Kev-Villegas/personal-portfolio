@@ -39,7 +39,7 @@ const Services = () => {
   });
   return (
     <section
-      className='section h-[1000px] md:h-[1100px] lg:h-[1200px] xs:h-[1800px] w-full bg-[#0a192f] px-6 py-6 pt-32'
+      className='section h-[1000px] md:h-[1100px] lg:h-[1200px] xs:h-[1200px] w-full bg-[#0a192f] px-6 py-6 pt-32'
       id='services'
       ref={ref}
     >
@@ -56,7 +56,7 @@ const Services = () => {
             <h2 className='text-4xl font-bold inline border-b-[3px] border-pink-600 font-lato'>
               About Me
             </h2>
-            <h3 className='max-w-[600px] font-semibold font-montserrat text-2xl py-2'>
+            <h3 className='max-w-[600px] font-semibold font-montserrat text-2xl py-4'>
               I'm A Front-End Developer & UX/UI Designer With Almost 4 Years Of
               Experiencie In The Area
             </h3>
@@ -125,11 +125,11 @@ const Services = () => {
                 const { id, icon, name, description } = service;
                 return (
                   <div
-                    className='border-b border-white/20 h-[250px] py-2'
+                    className='border-b border-white/20 h-[200px] py-2'
                     key={index}
                   >
-                    <div className=' max-w-[476px] py-2 h-[800px] '>
-                      <h4 className='text-2xl tracking-wider font-lato font-semibold py-2 mb-5'>
+                    <div className=' max-w-[476px] h-[250px]'>
+                      <h4 className='text-2xl tracking-wider font-lato font-semibold py-2'>
                         {icon} {name}
                       </h4>
                       <p className='font-montserrat leading-tight'>
