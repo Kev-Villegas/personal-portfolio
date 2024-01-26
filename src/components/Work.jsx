@@ -25,13 +25,13 @@ const Work = () => {
                 My Latest Work
               </h2>
               <p className='max-w-sm py-4 font-secondary'>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
-                hic nobis, vel deleniti amet pariatur voluptas voluptate
-                suscipit culpa nam.
+                Please take a look at my latest projects :D
               </p>
-              <button className='btn btn-outline mb-[22px] font-tertiary w-[170px] '>
-                View All Projects
-              </button>
+              <a href='https://www.behance.net/kevinvillegas1973' target='_blank'>
+                <button className='btn btn-outline mb-[22px] font-tertiary w-[170px] '>
+                  View All Projects
+                </button>
+              </a>
             </motion.div>
 
             {/* Project 1 */}
