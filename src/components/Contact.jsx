@@ -1,17 +1,15 @@
-import React from 'react';
-import { z } from 'zod';
-import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import Swal from 'sweetalert2';
+import { FaBehanceSquare } from 'react-icons/fa';
+import { IoLocation } from 'react-icons/io5';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { useForm } from 'react-hook-form';
+import { SiGmail } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
-import { RiWhatsappFill } from 'react-icons/ri';
-import { FaLinkedin } from 'react-icons/fa';
-import { IoLocation } from 'react-icons/io5';
-import { FaPhoneAlt } from 'react-icons/fa';
-import { FaBehanceSquare } from 'react-icons/fa';
-import { SiGmail } from 'react-icons/si';
-import { FaGithub } from 'react-icons/fa';
+import Swal from 'sweetalert2';
+import React from 'react';
+import { z } from 'zod';
 
 const Contact = () => {
   const schema = z.object({
@@ -22,7 +20,7 @@ const Contact = () => {
     email: z.string().email().min(6).max(60),
     message: z
       .string()
-      .min(15, { message: 'Message needs a minimum of 15 characters!' })
+      .min(10, { message: 'Message needs a minimum of 10 characters!' })
       .max(500),
   });
 
@@ -58,7 +56,7 @@ const Contact = () => {
       <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20'>
         <div className='mb-4'>
           <div className='mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12'>
-            <h2 className='font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl'>
+            <h2 className='font-heading mb-4 font-bold border-b-[3px] border-pink-600 inline tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl'>
               Contact
             </h2>
           </div>
@@ -121,7 +119,7 @@ const Contact = () => {
                   target='_blank'
                 >
                   <SiGmail size={25} />
-                  <span className='font-medium font-montserrat text-lg px-3 py-1 text-gray-300'>
+                  <span className='font-medium border-b border-white/20 font-montserrat text-lg px-3 py-1 text-gray-300'>
                     kevin.villegas1973@gmail.com
                   </span>
                 </a>
@@ -133,8 +131,8 @@ const Contact = () => {
               </h2>
               <form
                 id='contactForm'
-                onSubmit={handleSubmit(submitData)}
                 className='h-full pr-6 font-secondary'
+                onSubmit={handleSubmit(submitData)}
               >
                 <div className='mb-6'>
                   <div className='mx-0 mb-1 sm:mb-4'>
@@ -186,6 +184,7 @@ const Contact = () => {
                     ></label>
                     <textarea
                       {...register('message')}
+                      typeof='text'
                       id='textarea'
                       name='textarea'
                       cols='30'
