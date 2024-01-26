@@ -12,7 +12,7 @@ const Work = () => {
       id='work'
     >
       <div className='max-w-[1000px] xs:w-full mx-auto px-4 flex flex-col justify-center w-full h-full'>
-        <div className='flex flex-col lg:flex-row gap-x-10 '>
+        <div className='flex flex-col lg:flex-row gap-x-8'>
           <div className='flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0'>
             {/* Text */}
             <motion.div
@@ -25,10 +25,16 @@ const Work = () => {
                 My Latest Work
               </h2>
               <p className='max-w-sm py-4 font-secondary'>
-                Please take a look at my latest projects :D
+                Explore recent projects where creativity meets
+                functionality—innovative UX/UI designs and robust front-end
+                development showcase my passion for crafting captivating digital
+                experiences.
               </p>
-              <a href='https://www.behance.net/kevinvillegas1973' target='_blank'>
-                <button className='btn btn-outline mb-[22px] font-tertiary w-[170px] '>
+              <a
+                href='https://www.behance.net/kevinvillegas1973'
+                target='_blank'
+              >
+                <button className='btn btn-outline mb-[3px] font-tertiary w-[170px] '>
                   View All Projects
                 </button>
               </a>
@@ -61,7 +67,7 @@ const Work = () => {
           </div>
 
           {/* Project 2 & 3 */}
-          <div className='flex-1 flex flex-col gap-y-12'>
+          <div className='flex-1 flex flex-col gap-y-[52px] '>
             {/* Project 2 */}
             <motion.div
               variants={fadeIn('left', 0.5)}
