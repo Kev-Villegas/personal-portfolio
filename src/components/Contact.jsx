@@ -55,15 +55,27 @@ const Contact = () => {
     <section className='bg-[#0a192f] pt-44' id='contact'>
       <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20'>
         <div className='mb-4'>
-          <div className='mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12'>
+          <motion.div
+            variants={fadeIn('right', 0.3)}
+            initial='hidden'
+            whileInView={'show'}
+            viewport={{ once: true, amount: 0.3 }}
+            className='mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12'
+          >
             <h2 className='font-heading mb-4 font-bold border-b-[3px] border-pink-600 inline tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl'>
               Contact
             </h2>
-          </div>
+          </motion.div>
         </div>
         <div className='flex items-stretch justify-center'>
           <div className='grid md:grid-cols-2'>
-            <div className='h-full pr-6'>
+            <motion.div
+              variants={fadeIn('left', 0.3)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{ once: true, amount: 0.3 }}
+              className='h-full pr-6'
+            >
               <p className='mt-3 mb-6 text-xl max-w-[500px] font-secondary font-medium'>
                 Please Check My Socials Or Fill Out The Form If You Want To
                 Contact Me!
@@ -119,17 +131,24 @@ const Contact = () => {
                   target='_blank'
                 >
                   <SiGmail size={25} />
-                  <span className='font-medium border-b border-white/20 font-montserrat text-lg px-3 py-1 text-gray-300'>
+                  <span className='font-medium font-montserrat text-lg px-3 py-1 text-gray-300'>
                     kevin.villegas1973@gmail.com
                   </span>
                 </a>
               </div>
-            </div>
-            <div className='card h-fit max-w-6xl py-3' id='form'>
+            </motion.div>
+            <motion.form
+              variants={fadeIn('right', 0.3)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{ once: true, amount: 0.3 }}
+              className='card h-fit max-w-6xl py-3'
+              id='form'
+            >
               <h2 className='mb-4 text-xl font-semibold font-primary'>
                 Please fill the form if you want to contact me! :3
               </h2>
-              <form
+              <div
                 id='contactForm'
                 className='h-full pr-6 font-secondary'
                 onSubmit={handleSubmit(submitData)}
@@ -207,8 +226,8 @@ const Contact = () => {
                     Send Message
                   </button>
                 </div>
-              </form>
-            </div>
+              </div>
+            </motion.form>
           </div>
         </div>
       </div>
