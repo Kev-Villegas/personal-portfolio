@@ -52,7 +52,7 @@ const Contact = () => {
       );
   };
   return (
-    <section className='bg-[#0a192f] pt-44' id='contact'>
+    <section className='section h-[1000px] md:h-[1100px] lg:h-[1200px] xs:h-[1200px] w-full bg-[#0a192f] px-6 py-6' id='contact'>
       <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20'>
         <div className='mb-4'>
           <motion.div
