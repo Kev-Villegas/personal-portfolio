@@ -15,7 +15,12 @@ const Work = () => {
         <div className='flex flex-col lg:flex-row gap-x-10 '>
           <div className='flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0'>
             {/* Text */}
-            <div>
+            <motion.div
+              variants={fadeIn('right', 0.5)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <h2 className='text-4xl leading-tight text-accent font-primary'>
                 My Latest Work
               </h2>
@@ -27,10 +32,16 @@ const Work = () => {
               <button className='btn btn-outline mb-[22px] font-tertiary w-[170px] '>
                 View All Projects
               </button>
-            </div>
+            </motion.div>
 
             {/* Project 1 */}
-            <div className='group relative overflow-hidden border-2 border-white/50 rounded-xl gap-y-10'>
+            <motion.div
+              variants={fadeIn('left', 0.5)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{ once: true, amount: 0.3 }}
+              className='group relative overflow-hidden border-2 border-white/50 rounded-xl gap-y-10'
+            >
               {/* Overlay */}
               <div className='group-hover:bg-black/70 w-full h-full absolute z-15 transition-all duration-300'></div>
               <img
@@ -46,13 +57,19 @@ const Work = () => {
               <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-15'>
                 <span className='text-3xl text-white'>Rawg Game Hub</span>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Project 2 & 3 */}
           <div className='flex-1 flex flex-col gap-y-12'>
             {/* Project 2 */}
-            <div className='group relative overflow-hidden border-2 border-white/50 rounded-xl'>
+            <motion.div
+              variants={fadeIn('left', 0.5)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{ once: true, amount: 0.3 }}
+              className='group relative overflow-hidden border-2 border-white/50 rounded-xl'
+            >
               {/* Overlay */}
               <div className='group-hover:bg-black/100 group-hover:bg-blend-darken w-full h-full absolute z-15 transition-all duration-300'></div>
               <img
@@ -68,10 +85,16 @@ const Work = () => {
               <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-15'>
                 <span className='text-3xl text-white'>Personal Portfolio</span>
               </div>
-            </div>
+            </motion.div>
 
             {/* Project 3 */}
-            <div className='group relative overflow-hidden border-2 border-white/50 rounded-xl'>
+            <motion.div
+              variants={fadeIn('left', 0.5)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{ once: true, amount: 0.3 }}
+              className='group relative overflow-hidden border-2 border-white/50 rounded-xl'
+            >
               {/* Overlay */}
               <div className='group-hover:bg-black/100 group-hover:bg-blend-darken w-full h-full absolute z-15 transition-all duration-300'></div>
               <img
@@ -85,7 +108,7 @@ const Work = () => {
               <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-15'>
                 <span className='text-3xl text-white'>Gym Landing Page</span>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
