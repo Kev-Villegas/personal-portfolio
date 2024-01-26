@@ -23,7 +23,7 @@ const Contact = () => {
     message: z
       .string()
       .min(15, { message: 'Message needs a minimum of 15 characters!' })
-      .max(200),
+      .max(500),
   });
 
   const {
@@ -54,29 +54,23 @@ const Contact = () => {
       );
   };
   return (
-    <section
-      className='w-full h-[1400px] md:h-[1600px] lg:h-[900px] xs:h-[1400px] px-6 md:pt-56 bg-[#0a192f]'
-      id='contact'
-    >
-      <div className='md:max-w-[500px] xs:max-w-[320px] mx-auto flex flex-col w-full h-full'>
-        <div className='py-4 xs:w-[320px]'>
-          <h1 className='text-4xl  text-white border-b-2 border-pink-600 inline'>
-            Contact Me
-          </h1>
+    <section className='bg-[#0a192f] pt-44' id='contact'>
+      <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20'>
+        <div className='mb-4'>
+          <div className='mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12'>
+            <h2 className='font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl'>
+              Contact
+            </h2>
+          </div>
         </div>
-
-        {/* <div className='w-full'> */}
-          <div className='flex flex-col lg:flex-row w-[325px] '>
-            {/* Text & Image*/}
-            <div className='w-[400px] xs:w-[320px] justify-start mt-12 '>
-              <h4 className='text-xl uppercase text-accent font-medium mb-2 tracking-wide'>
-                Get in touch
-              </h4>
-              <h2 className='text-2xl leading-none mb-5 w-[320px] '>
+        <div className='flex items-stretch justify-center'>
+          <div className='grid md:grid-cols-2'>
+            <div className='h-full pr-6'>
+              <p className='mt-3 mb-6 text-xl max-w-[500px] font-secondary font-medium'>
                 Please Check My Socials Or Fill Out The Form If You Want To
                 Contact Me!
-              </h2>
-              <div className='space-y-4 text-center justify-center'>
+              </p>
+              <div className='space-y-4 text-center justify-center font-primary '>
                 <a className='flex items-center text-orange-600'>
                   <IoLocation size={30} />
                   <span className='font-medium font-montserrat text-lg px-3 py-1 text-gray-300'>
@@ -110,6 +104,19 @@ const Contact = () => {
                   </span>
                 </a>
                 <a
+                  href='https://www.behance.net/kevinvillegas1973'
+                  className='flex items-center text-blue-600'
+                  target='_blank'
+                >
+                  <FaGithub
+                    size={28}
+                    className='text-[#555555] cursor-pointer'
+                  />
+                  <span className='font-medium font-montserrat text-lg px-3 py-1 text-gray-300'>
+                    /Kev-Villegas
+                  </span>
+                </a>
+                <a
                   className='flex items-center text-orange-700'
                   target='_blank'
                 >
@@ -120,55 +127,90 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-            {/* Form Start */}
-            <form
-              className='flex flex-col w-[600px] xs:w-[320px] py-3'
-              onSubmit={handleSubmit(submitData)}
-            >
-              <label className='block mt-7'>
-                <span className='mb-1'>Full Name</span>
-              </label>
-              <input
-                {...register('name')}
-                className='bg-[#ccd6f6] p-2 rounded-md xs:w-[300px] sm:w-[600px] md:w-[500px] lg:w-[400px]'
-                type='text'
-                placeholder='Name...'
-                name='name'
-              />
-              {errors.name && (
-                <span className='text-red-600'>{errors.name.message}</span>
-              )}
-              <label className='block mt-7'>
-                <span className=''>Email Address</span>
-              </label>
-              <input
-                {...register('email')}
-                className='p-2 bg-[#ccd6f6] rounded-md xs:w-[300px] sm:w-[600px] md:w-[500px] lg:w-[400px]'
-                type='email'
-                placeholder='Email...'
-                name='email'
-              />
-              {errors.email && (
-                <span className='text-red-600'>{errors.email.message}</span>
-              )}
-              <label className='block mt-8'>
-                <span className=''>Your Message</span>
-              </label>
-              <textarea
-                {...register('message')}
-                className='bg-[#ccd6f6] p-2 rounded-md resize-none xs:w-[300px] sm:w-[600px] md:w-[500px] md:h-[100px] xs:h-[250px] lg:w-[400px] '
-                name='message'
-                rows='10'
-                placeholder='Message...'
-              ></textarea>
-              {errors.message && (
-                <span className='text-red-600'>{errors.message.message}</span>
-              )}
-              <button className='btn btn-outline px-4 py-4 mt-6 w-[150px] justify-center text-center'>
-                Send Message
-              </button>
-            </form>
-          {/* </div> */}
+            <div className='card h-fit max-w-6xl py-3' id='form'>
+              <h2 className='mb-4 text-xl font-semibold font-primary'>
+                Please fill the form if you want to contact me! :3
+              </h2>
+              <form
+                id='contactForm'
+                onSubmit={handleSubmit(submitData)}
+                className='h-full pr-6 font-secondary'
+              >
+                <div className='mb-6'>
+                  <div className='mx-0 mb-1 sm:mb-4'>
+                    <div className='mx-0 mb-1 sm:mb-4'>
+                      <label
+                        htmlFor='name'
+                        className='pb-1 text-xs uppercase tracking-wider'
+                      ></label>
+                      <input
+                        type='text'
+                        {...register('name')}
+                        id='name'
+                        autoComplete='given-name'
+                        placeholder='Your name'
+                        className='mb-2 w-full rounded-md border bg-slate-950 border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-95000 sm:mb-0'
+                        name='name'
+                      />
+                      {errors.name && (
+                        <span className='text-red-600'>
+                          {errors.name.message}
+                        </span>
+                      )}
+                    </div>
+                    <div className='mx-0 mb-1 sm:mb-4'>
+                      <label
+                        htmlFor='email'
+                        className='pb-1 text-xs uppercase tracking-wider'
+                      ></label>
+                      <input
+                        {...register('email')}
+                        type='email'
+                        id='email'
+                        autoComplete='email'
+                        placeholder='Your email address'
+                        className='mb-2 w-full rounded-md border bg-slate-950 border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0'
+                        name='email'
+                      />
+                      {errors.email && (
+                        <span className='text-red-600'>
+                          {errors.email.message}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <div className='mx-0 mb-1 sm:mb-4'>
+                    <label
+                      htmlFor='textarea'
+                      className='pb-1 text-xs uppercase tracking-wider'
+                    ></label>
+                    <textarea
+                      {...register('message')}
+                      id='textarea'
+                      name='textarea'
+                      cols='30'
+                      rows='5'
+                      placeholder='Write your message...'
+                      className='mb-2 w-full rounded-md border resize-none bg-slate-950 border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0'
+                    ></textarea>
+                    {errors.message && (
+                      <span className='text-red-600'>
+                        {errors.message.message}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <div className='text-center'>
+                  <button
+                    type='submit'
+                    className='w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0'
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </section>
