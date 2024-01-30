@@ -1,4 +1,4 @@
-import TypeScript from '../assets/typescript.webp';
+// import TypeScript from '../assets/typescript.webp';
 import JavaScript from '../assets/javascript.webp';
 import Wordpress from '../assets/wordpress.webp';
 import Elementor from '../assets/elementor.webp';
@@ -8,7 +8,7 @@ import ReactImg from '../assets/react.webp';
 import Github from '../assets/github.webp';
 import Figma from '../assets/figma.webp';
 import HTML from '../assets/html.webp';
-import Node from '../assets/node.webp';
+// import Node from '../assets/node.webp';
 import Next from '../assets/next.webp';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
@@ -81,10 +81,10 @@ const Skills = () => {
             />
             <p className='my-4'>TypeScript</p>
           </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+          {/* <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img className='w-20 mx-auto' src={Node} alt='Nodejs icon' />
             <p className='my-4'>Node.js</p>
-          </div>
+          </div> */}
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img className='w-20 mx-auto' src={Next} alt='Nodejs icon' />
             <p className='my-4'>Next.js</p>
