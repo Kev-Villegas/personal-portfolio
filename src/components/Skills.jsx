@@ -1,4 +1,4 @@
-// import TypeScript from '../assets/typescript.webp';
+import TypeScript from '../assets/typescript.webp';
 import JavaScript from '../assets/javascript.webp';
 import Wordpress from '../assets/wordpress.webp';
 import Elementor from '../assets/elementor.webp';
