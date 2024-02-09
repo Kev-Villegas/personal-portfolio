@@ -143,6 +143,7 @@ const Contact = () => {
               whileInView={'show'}
               viewport={{ once: true, amount: 0.3 }}
               className='card h-fit max-w-6xl py-3'
+              onSubmit={handleSubmit(submitData)}
               id='form'
             >
               <h2 className='mb-4 text-xl font-semibold font-primary'>
@@ -151,7 +152,7 @@ const Contact = () => {
               <div
                 id='contactForm'
                 className='h-full pr-6 font-secondary'
-                onSubmit={handleSubmit(submitData)}
+              
               >
                 <div className='mb-6'>
                   <div className='mx-0 mb-1 sm:mb-4'>
@@ -203,9 +204,9 @@ const Contact = () => {
                     ></label>
                     <textarea
                       {...register('message')}
-                      typeof='text'
-                      id='textarea'
-                      name='textarea'
+                    typeof='text'
+                      id='message'
+                      name='message'
                       cols='30'
                       rows='5'
                       placeholder='Write your message...'
